@@ -37,7 +37,7 @@ public class UserAgent extends CordovaPlugin {
                try {
                   if (action.equals("set")) {
                      String text = args.getString(0);
-                     settings.setUserAgentString(text);
+                     preferences.set("OverrideUserAgent", text);
                      callbackContext.success(settings.getUserAgentString());
                      return true;
                    } else if (action.equals("get")) {
